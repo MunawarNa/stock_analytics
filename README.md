@@ -12,14 +12,14 @@ The project processes raw stock data through structured data layers to ensure da
   [ Raw Data Sources ] 
           │
           ▼
-  ┌────────────────────────────────────────────────────────┐
+┌────────────────────────────────────────────────────────┐
 │ 1. BRONZE LAYER (extract_bronze.py)                    │
 │    • Ingests raw API stock feeds into Delta Lake.      │
 │                                                        │  
 └────────────────────────────────────────────────────────┘
-
+          │
           ▼
-  ┌────────────────────────────────────────────────────────┐
+┌────────────────────────────────────────────────────────┐
 │ 2. GOLD LAYER (bronze_to_gold.py)                      │
 │    • Reads the single Bronze source of truth.          │
 │    • Executes optimized Spark SQL business logic.      │
